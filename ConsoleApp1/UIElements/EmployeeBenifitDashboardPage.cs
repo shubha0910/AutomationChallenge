@@ -52,5 +52,10 @@ namespace PaylocityBenifitsDashboard.UIElements
         [FindsBy(How = How.Id, Using = "add")]
         public IWebElement AddEmployeeButton { get; set; }
 
+        [FindsBy(How = How.XPath, Using = "//*[@id=\"employeesTable\"]/tbody/tr/td[2]")]
+        public IList<IWebElement> LastNameList { get; set; }
+
+        [FindsBy(How = How.XPath,Using = "//*[@id=\"employeesTable\"]/tbody/tr/td[3]")]
+        public IList<IWebElement> FirstNameList { get; set; }
     }
 }

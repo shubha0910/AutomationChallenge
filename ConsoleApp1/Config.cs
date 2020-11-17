@@ -30,5 +30,17 @@ namespace PaylocityBenifitsDashboard
                 }
             }
         }
+        public static class EmployeeInfo
+        {
+            public static class ValidEmployeeInfo
+            {
+                public static string FirstName = "Mike";
+                public static string LastName = "Scott";
+                public static string NumberOfDependents = "2";
+
+            }
+
+        }
+
     }
 }
