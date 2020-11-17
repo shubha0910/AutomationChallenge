@@ -17,8 +17,8 @@ namespace PaylocityBenifitsDashboard
             return driver;
         }
 
-        
-        public static void LoginToEmployeeBenifitDashboard(string username, string password,IWebDriver driver)
+
+        public static void LoginToEmployeeBenifitDashboard(string username, string password, IWebDriver driver)
         {
             LogInPage login = new LogInPage(driver);
 
@@ -31,26 +31,28 @@ namespace PaylocityBenifitsDashboard
             login.LoginButton.Click();
 
             Thread.Sleep(3000);
-            
+
 
         }
 
-        public static void ValidAddEmployee(string firstname,string lastname, string dependents,IWebDriver driver)
+        public static void ValidAddEmployee(string firstname, string lastname, string dependents, IWebDriver driver)
         {
             AddEmployeeDialogBox addEmp = new AddEmployeeDialogBox(driver);
 
             addEmp.FirstNameTextbox.Clear();
             addEmp.FirstNameTextbox.SendKeys(firstname);
 
-            addEmp.LastNAmeTextbox.Clear();
-            addEmp.LastNAmeTextbox.SendKeys(lastname);
+            addEmp.LastNameTextbox.Clear();
+            addEmp.LastNameTextbox.SendKeys(lastname);
 
             addEmp.DependentsTextbox.Clear();
             addEmp.DependentsTextbox.SendKeys(dependents);
 
             addEmp.AddButton.Click();
 
-        }
+            //EmployeeBenifitDashboardPage dashboard = new EmployeeBenifitDashboardPage(driver);
 
+
+        }
     }
 }

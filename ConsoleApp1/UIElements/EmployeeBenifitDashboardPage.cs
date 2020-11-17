@@ -57,5 +57,11 @@ namespace PaylocityBenifitsDashboard.UIElements
 
         [FindsBy(How = How.XPath,Using = "//*[@id=\"employeesTable\"]/tbody/tr/td[3]")]
         public IList<IWebElement> FirstNameList { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//*[@id=\"employeesTable\"]/tbody/tr[1]/td")]
+        public IList<IWebElement> ColumnList { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//*[@id=\"employeesTable\"]/tbody/tr/td[4]")]
+        public IList<IWebElement> DependentsList { get; set; }
     }
 }

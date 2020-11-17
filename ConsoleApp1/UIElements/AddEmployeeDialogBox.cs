@@ -35,7 +35,7 @@ namespace PaylocityBenifitsDashboard.UIElements
         public IWebElement FirstNameTextbox { get; set; }
 
         [FindsBy(How = How.Id, Using = "lastName")]
-        public IWebElement LastNAmeTextbox { get; set; }
+        public IWebElement LastNameTextbox { get; set; }
 
         [FindsBy(How = How.Id, Using = "dependants")]
         public IWebElement DependentsTextbox { get; set; }
