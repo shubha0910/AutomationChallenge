@@ -49,6 +49,8 @@ namespace PaylocityBenifitsDashboard.UIElements
         [FindsBy(How = How.CssSelector, Using = "#employeesTable > tbody > tr:nth-child(1) > td:nth-child(9) > i.fas.fa-times")]
         public IList<IWebElement> DeleteIcon { get; set; }
 
+        [FindsBy(How = How.Id, Using = "add")]
+        public IWebElement AddEmployeeButton { get; set; }
 
     }
 }

@@ -31,7 +31,7 @@ namespace PaylocityBenifitsDashboard.Scenarios
             Actions.LoginToEmployeeBenifitDashboard(Config.Credentials.Invalid.Username.BlankUserName, Config.Credentials.Invalid.Password.BlankPassword,driver);
 
             Assert.AreEqual(logIn.LoginErrorMessage.Text, "There were one or more problems that prevented you from logging in:");
-           String text1 =logIn.UsernameRequiredErrorMessage.Text;
+            String text1 =logIn.UsernameRequiredErrorMessage.Text;
             Assert.AreEqual(logIn.UsernameRequiredErrorMessage.Text, "The Username field is required.");
             Assert.AreEqual(logIn.PasswordRequiredErrorMessage.Text, "The Password field is required.");
         }

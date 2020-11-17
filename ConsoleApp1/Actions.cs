@@ -35,5 +35,22 @@ namespace PaylocityBenifitsDashboard
 
         }
 
+        public static void ValidAddEmployee(string firstname,string lastname, string dependents,IWebDriver driver)
+        {
+            AddEmployeeDialogBox addEmp = new AddEmployeeDialogBox(driver);
+
+            addEmp.FirstNameTextbox.Clear();
+            addEmp.FirstNameTextbox.SendKeys(firstname);
+
+            addEmp.LastNAmeTextbox.Clear();
+            addEmp.LastNAmeTextbox.SendKeys(lastname);
+
+            addEmp.DependentsTextbox.Clear();
+            addEmp.DependentsTextbox.SendKeys(dependents);
+
+            addEmp.AddButton.Click();
+
+        }
+
     }
 }
