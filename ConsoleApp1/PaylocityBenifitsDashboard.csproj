@@ -61,10 +61,12 @@
     <Compile Include="Actions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scenarios\AddEmployee.cs" />
+    <Compile Include="Scenarios\DeleteEmployee.cs" />
     <Compile Include="Scenarios\LoginCredentialsValidation.cs" />
     <Compile Include="Scenarios\LoginPageLayoutValidations.cs" />
     <Compile Include="Scenarios\UpdateEmployee.cs" />
     <Compile Include="UIElements\AddEmployeeDialogBox.cs" />
+    <Compile Include="UIElements\DeleteEmployeeDialogBox.cs" />
     <Compile Include="UIElements\EmployeeBenifitDashboardPage.cs" />
     <Compile Include="UIElements\LogInPage.cs" />
     <Compile Include="UIElements\UpdateEmployeeDialogBox.cs" />

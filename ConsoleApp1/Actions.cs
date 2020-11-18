@@ -99,5 +99,12 @@ namespace PaylocityBenifitsDashboard
 
         }
 
+        public static void DeleteEmployee(string ID,IWebDriver driver)
+        {
+            DeleteEmployeeDialogBox delEmp = new DeleteEmployeeDialogBox(driver);
+
+            delEmp.DeleteButton.Click();
+        }
+
     }
 }

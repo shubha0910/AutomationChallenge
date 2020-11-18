@@ -61,6 +61,13 @@ namespace PaylocityBenifitsDashboard
                 public static string NumberOfDependents = "4";
             }
 
+            public static class DeleteEmployeeInfo
+            {
+                public static string FirstName = "Jim";
+                public static string LastName = "Halpert";
+                public static string NumberOfDependents = "4";
+            }
+
         }
 
     }

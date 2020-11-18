@@ -146,6 +146,11 @@ namespace PaylocityBenifitsDashboard.Scenarios
             }
 
         }
+        [OneTimeTearDown]
+        public void CleanUp()
+        {
+            driver.Quit();
+        }
 
     }
 }
