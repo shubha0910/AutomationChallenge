@@ -196,12 +196,7 @@ namespace PaylocityBenifitsDashboard.Scenarios
             Thread.Sleep(3000);
 
         }
-        [Test]
-        public void CalculationCheck()
-        {
-            
-        }
-
+        
 
         [OneTimeTearDown]
         public void CleanUp()

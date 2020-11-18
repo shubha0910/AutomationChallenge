@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-run id="0" runstate="Runnable" testcasecount="9" result="Failed" total="9" passed="8" failed="1" inconclusive="0" skipped="0" asserts="33" engine-version="3.11.1.0" clr-version="4.0.30319.42000" start-time="2020-11-17 16:21:38Z" end-time="2020-11-17 16:22:10Z" duration="31.842592">
+<test-run id="0" runstate="Runnable" testcasecount="13" result="Failed" total="13" passed="11" failed="2" inconclusive="0" skipped="0" asserts="40" engine-version="3.11.1.0" clr-version="4.0.30319.42000" start-time="2020-11-18 01:47:51Z" end-time="2020-11-18 01:48:53Z" duration="61.875084">
   <command-line><![CDATA[nunit3-console.exe  "C:\ShubhaInterview\AutomationChallenge\AutomationChallenge\ConsoleApp1\bin\Debug\ConsoleApp1.exe"]]></command-line>
-  <test-suite type="Assembly" id="0-1012" name="ConsoleApp1.exe" fullname="C:\ShubhaInterview\AutomationChallenge\AutomationChallenge\ConsoleApp1\bin\Debug\ConsoleApp1.exe" runstate="Runnable" testcasecount="9" result="Failed" site="Child" start-time="2020-11-17 16:21:40Z" end-time="2020-11-17 16:22:10Z" duration="30.064727" total="9" passed="8" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="33">
+  <test-suite type="Assembly" id="0-1016" name="ConsoleApp1.exe" fullname="C:\ShubhaInterview\AutomationChallenge\AutomationChallenge\ConsoleApp1\bin\Debug\ConsoleApp1.exe" runstate="Runnable" testcasecount="13" result="Failed" site="Child" start-time="2020-11-18 01:47:52Z" end-time="2020-11-18 01:48:53Z" duration="60.394937" total="13" passed="11" failed="2" warnings="0" inconclusive="0" skipped="0" asserts="40">
     <environment framework-version="3.12.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.19041.0" platform="Win32NT" cwd="C:\ShubhaInterview\AutomationChallenge\AutomationChallenge\packages\NUnit.ConsoleRunner.3.11.1\tools" machine-name="SHUSUN" user="Shubha" user-domain="SHUSUN" culture="en-US" uiculture="en-US" os-architecture="x86" />
     <settings>
       <setting name="DisposeRunners" value="True" />
@@ -17,35 +17,87 @@
     <properties>
       <property name="ParallelScope" value="Fixtures" />
       <property name="LevelOfParallelism" value="2" />
-      <property name="_PID" value="5196" />
+      <property name="_PID" value="12396" />
       <property name="_APPDOMAIN" value="domain-" />
     </properties>
     <failure>
       <message><![CDATA[One or more child tests had errors]]></message>
     </failure>
-    <test-suite type="TestSuite" id="0-1013" name="PaylocityBenifitsDashboard" fullname="PaylocityBenifitsDashboard" runstate="Runnable" testcasecount="9" result="Failed" site="Child" start-time="2020-11-17 16:21:40Z" end-time="2020-11-17 16:22:10Z" duration="29.991479" total="9" passed="8" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="33">
+    <test-suite type="TestSuite" id="0-1017" name="PaylocityBenifitsDashboard" fullname="PaylocityBenifitsDashboard" runstate="Runnable" testcasecount="13" result="Failed" site="Child" start-time="2020-11-18 01:47:52Z" end-time="2020-11-18 01:48:53Z" duration="60.351057" total="13" passed="11" failed="2" warnings="0" inconclusive="0" skipped="0" asserts="40">
       <failure>
         <message><![CDATA[One or more child tests had errors]]></message>
       </failure>
-      <test-suite type="TestSuite" id="0-1014" name="Scenarios" fullname="PaylocityBenifitsDashboard.Scenarios" runstate="Runnable" testcasecount="9" result="Failed" site="Child" start-time="2020-11-17 16:21:40Z" end-time="2020-11-17 16:22:10Z" duration="29.988442" total="9" passed="8" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="33">
+      <test-suite type="TestSuite" id="0-1018" name="Scenarios" fullname="PaylocityBenifitsDashboard.Scenarios" runstate="Runnable" testcasecount="13" result="Failed" site="Child" start-time="2020-11-18 01:47:52Z" end-time="2020-11-18 01:48:53Z" duration="60.347280" total="13" passed="11" failed="2" warnings="0" inconclusive="0" skipped="0" asserts="40">
         <failure>
           <message><![CDATA[One or more child tests had errors]]></message>
         </failure>
-        <test-suite type="TestFixture" id="0-1000" name="AddEmployee" fullname="PaylocityBenifitsDashboard.Scenarios.AddEmployee" classname="PaylocityBenifitsDashboard.Scenarios.AddEmployee" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2020-11-17 16:21:40Z" end-time="2020-11-17 16:21:59Z" duration="19.125452" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="8">
+        <test-suite type="TestFixture" id="0-1006" name="LoginCredentialsValidation" fullname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation" classname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation" runstate="Runnable" testcasecount="4" result="Passed" start-time="2020-11-18 01:47:52Z" end-time="2020-11-18 01:48:20Z" duration="27.410595" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="17">
+          <properties>
+            <property name="ParallelScope" value="Self" />
+          </properties>
+          <test-case id="0-1007" name="BlankCredentials" fullname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation.BlankCredentials" methodname="BlankCredentials" classname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation" runstate="Runnable" seed="703571805" result="Passed" start-time="2020-11-18 01:48:03Z" end-time="2020-11-18 01:48:07Z" duration="4.584634" asserts="3">
+            <properties>
+              <property name="Order" value="1" />
+            </properties>
+          </test-case>
+          <test-case id="0-1008" name="InvalidCredentials" fullname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation.InvalidCredentials" methodname="InvalidCredentials" classname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation" runstate="Runnable" seed="439813606" result="Passed" start-time="2020-11-18 01:48:07Z" end-time="2020-11-18 01:48:12Z" duration="4.297280" asserts="2">
+            <properties>
+              <property name="Order" value="2" />
+            </properties>
+          </test-case>
+          <test-case id="0-1009" name="ValidCredentials" fullname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation.ValidCredentials" methodname="ValidCredentials" classname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation" runstate="Runnable" seed="112532287" result="Passed" start-time="2020-11-18 01:48:12Z" end-time="2020-11-18 01:48:16Z" duration="4.886457" asserts="3">
+            <properties>
+              <property name="Order" value="3" />
+            </properties>
+          </test-case>
+          <test-case id="0-1010" name="DashboardCoulmnHeaderValiadtion" fullname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation.DashboardCoulmnHeaderValiadtion" methodname="DashboardCoulmnHeaderValiadtion" classname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation" runstate="Runnable" seed="1663393924" result="Passed" start-time="2020-11-18 01:48:16Z" end-time="2020-11-18 01:48:17Z" duration="0.973457" asserts="9">
+            <properties>
+              <property name="Order" value="4" />
+            </properties>
+          </test-case>
+        </test-suite>
+        <test-suite type="TestFixture" id="0-1011" name="LoginPageLayoutValidations" fullname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations" classname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations" runstate="Runnable" testcasecount="4" result="Passed" start-time="2020-11-18 01:48:20Z" end-time="2020-11-18 01:48:30Z" duration="10.180722" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="8">
+          <properties>
+            <property name="ParallelScope" value="Self" />
+          </properties>
+          <test-case id="0-1015" name="LogInButtonCheck" fullname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations.LogInButtonCheck" methodname="LogInButtonCheck" classname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations" runstate="Runnable" seed="1309341935" result="Passed" start-time="2020-11-18 01:48:27Z" end-time="2020-11-18 01:48:28Z" duration="0.256273" asserts="2" />
+          <test-case id="0-1012" name="LogInPageHeaderCheck" fullname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations.LogInPageHeaderCheck" methodname="LogInPageHeaderCheck" classname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations" runstate="Runnable" seed="572548131" result="Passed" start-time="2020-11-18 01:48:28Z" end-time="2020-11-18 01:48:28Z" duration="0.179483" asserts="2" />
+          <test-case id="0-1014" name="LogInPagePasswordLabelCheck" fullname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations.LogInPagePasswordLabelCheck" methodname="LogInPagePasswordLabelCheck" classname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations" runstate="Runnable" seed="1884537422" result="Passed" start-time="2020-11-18 01:48:28Z" end-time="2020-11-18 01:48:28Z" duration="0.151283" asserts="2" />
+          <test-case id="0-1013" name="LogInPageUsernameLabelCheck" fullname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations.LogInPageUsernameLabelCheck" methodname="LogInPageUsernameLabelCheck" classname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations" runstate="Runnable" seed="1637234956" result="Passed" start-time="2020-11-18 01:48:28Z" end-time="2020-11-18 01:48:28Z" duration="0.153754" asserts="2" />
+        </test-suite>
+        <test-suite type="TestFixture" id="0-1000" name="AddEmployee" fullname="PaylocityBenifitsDashboard.Scenarios.AddEmployee" classname="PaylocityBenifitsDashboard.Scenarios.AddEmployee" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2020-11-18 01:47:52Z" end-time="2020-11-18 01:48:53Z" duration="60.347131" total="5" passed="3" failed="2" warnings="0" inconclusive="0" skipped="0" asserts="15">
           <properties>
             <property name="ParallelScope" value="Self" />
           </properties>
           <failure>
             <message><![CDATA[One or more child tests had errors]]></message>
           </failure>
-          <test-case id="0-1001" name="AddEmployeeDialogBoxDisplayValidation" fullname="PaylocityBenifitsDashboard.Scenarios.AddEmployee.AddEmployeeDialogBoxDisplayValidation" methodname="AddEmployeeDialogBoxDisplayValidation" classname="PaylocityBenifitsDashboard.Scenarios.AddEmployee" runstate="Runnable" seed="1720633181" result="Failed" start-time="2020-11-17 16:21:50Z" end-time="2020-11-17 16:21:58Z" duration="8.020049" asserts="8">
+          <test-case id="0-1002" name="AddBlankEmployee" fullname="PaylocityBenifitsDashboard.Scenarios.AddEmployee.AddBlankEmployee" methodname="AddBlankEmployee" classname="PaylocityBenifitsDashboard.Scenarios.AddEmployee" runstate="Runnable" seed="176534082" result="Failed" start-time="2020-11-18 01:48:00Z" end-time="2020-11-18 01:48:16Z" duration="16.362931" asserts="2">
+            <failure>
+              <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+              <stack-trace><![CDATA[   at PaylocityBenifitsDashboard.Scenarios.AddEmployee.AddBlankEmployee() in C:\ShubhaInterview\AutomationChallenge\AutomationChallenge\ConsoleApp1\Scenarios\AddEmployee.cs:line 77
+]]></stack-trace>
+            </failure>
+            <assertions>
+              <assertion result="Failed">
+                <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+                <stack-trace><![CDATA[   at PaylocityBenifitsDashboard.Scenarios.AddEmployee.AddBlankEmployee() in C:\ShubhaInterview\AutomationChallenge\AutomationChallenge\ConsoleApp1\Scenarios\AddEmployee.cs:line 77
+]]></stack-trace>
+              </assertion>
+            </assertions>
+          </test-case>
+          <test-case id="0-1001" name="AddEmployeeDialogBoxDisplayValidation" fullname="PaylocityBenifitsDashboard.Scenarios.AddEmployee.AddEmployeeDialogBoxDisplayValidation" methodname="AddEmployeeDialogBoxDisplayValidation" classname="PaylocityBenifitsDashboard.Scenarios.AddEmployee" runstate="Runnable" seed="1537007541" result="Failed" start-time="2020-11-18 01:48:16Z" end-time="2020-11-18 01:48:28Z" duration="11.167019" asserts="8">
             <failure>
               <message><![CDATA[  Expected string length 11 but was 10. Strings differ at index 6.
   Expected: "Dependants:"
   But was:  "Dependents"
   -----------------^
 ]]></message>
-              <stack-trace><![CDATA[   at PaylocityBenifitsDashboard.Scenarios.AddEmployee.AddEmployeeDialogBoxDisplayValidation() in C:\ShubhaInterview\AutomationChallenge\AutomationChallenge\ConsoleApp1\Scenarios\AddEmployee.cs:line 43
+              <stack-trace><![CDATA[   at PaylocityBenifitsDashboard.Scenarios.AddEmployee.AddEmployeeDialogBoxDisplayValidation() in C:\ShubhaInterview\AutomationChallenge\AutomationChallenge\ConsoleApp1\Scenarios\AddEmployee.cs:line 44
 ]]></stack-trace>
             </failure>
             <assertions>
@@ -55,45 +107,14 @@
   But was:  "Dependents"
   -----------------^
 ]]></message>
-                <stack-trace><![CDATA[   at PaylocityBenifitsDashboard.Scenarios.AddEmployee.AddEmployeeDialogBoxDisplayValidation() in C:\ShubhaInterview\AutomationChallenge\AutomationChallenge\ConsoleApp1\Scenarios\AddEmployee.cs:line 43
+                <stack-trace><![CDATA[   at PaylocityBenifitsDashboard.Scenarios.AddEmployee.AddEmployeeDialogBoxDisplayValidation() in C:\ShubhaInterview\AutomationChallenge\AutomationChallenge\ConsoleApp1\Scenarios\AddEmployee.cs:line 44
 ]]></stack-trace>
               </assertion>
             </assertions>
           </test-case>
-        </test-suite>
-        <test-suite type="TestFixture" id="0-1007" name="LoginPageLayoutValidations" fullname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations" classname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations" runstate="Runnable" testcasecount="4" result="Passed" start-time="2020-11-17 16:21:59Z" end-time="2020-11-17 16:22:08Z" duration="9.349547" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="8">
-          <properties>
-            <property name="ParallelScope" value="Self" />
-          </properties>
-          <test-case id="0-1011" name="LogInButtonCheck" fullname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations.LogInButtonCheck" methodname="LogInButtonCheck" classname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations" runstate="Runnable" seed="1100435004" result="Passed" start-time="2020-11-17 16:22:06Z" end-time="2020-11-17 16:22:06Z" duration="0.197681" asserts="2" />
-          <test-case id="0-1008" name="LogInPageHeaderCheck" fullname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations.LogInPageHeaderCheck" methodname="LogInPageHeaderCheck" classname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations" runstate="Runnable" seed="2047063383" result="Passed" start-time="2020-11-17 16:22:06Z" end-time="2020-11-17 16:22:06Z" duration="0.145010" asserts="2" />
-          <test-case id="0-1010" name="LogInPagePasswordLabelCheck" fullname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations.LogInPagePasswordLabelCheck" methodname="LogInPagePasswordLabelCheck" classname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations" runstate="Runnable" seed="1379214876" result="Passed" start-time="2020-11-17 16:22:06Z" end-time="2020-11-17 16:22:06Z" duration="0.136430" asserts="2" />
-          <test-case id="0-1009" name="LogInPageUsernameLabelCheck" fullname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations.LogInPageUsernameLabelCheck" methodname="LogInPageUsernameLabelCheck" classname="PaylocityBenifitsDashboard.Scenarios.LoginPageLayoutValidations" runstate="Runnable" seed="1777942021" result="Passed" start-time="2020-11-17 16:22:06Z" end-time="2020-11-17 16:22:06Z" duration="0.124838" asserts="2" />
-        </test-suite>
-        <test-suite type="TestFixture" id="0-1002" name="LoginCredentialsValidation" fullname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation" classname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation" runstate="Runnable" testcasecount="4" result="Passed" start-time="2020-11-17 16:21:40Z" end-time="2020-11-17 16:22:10Z" duration="29.974525" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="17">
-          <properties>
-            <property name="ParallelScope" value="Self" />
-          </properties>
-          <test-case id="0-1003" name="BlankCredentials" fullname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation.BlankCredentials" methodname="BlankCredentials" classname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation" runstate="Runnable" seed="133904510" result="Passed" start-time="2020-11-17 16:21:50Z" end-time="2020-11-17 16:21:56Z" duration="5.979460" asserts="3">
-            <properties>
-              <property name="Order" value="1" />
-            </properties>
-          </test-case>
-          <test-case id="0-1004" name="InvalidCredentials" fullname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation.InvalidCredentials" methodname="InvalidCredentials" classname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation" runstate="Runnable" seed="1414714777" result="Passed" start-time="2020-11-17 16:21:56Z" end-time="2020-11-17 16:22:00Z" duration="4.739239" asserts="2">
-            <properties>
-              <property name="Order" value="2" />
-            </properties>
-          </test-case>
-          <test-case id="0-1005" name="ValidCredentials" fullname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation.ValidCredentials" methodname="ValidCredentials" classname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation" runstate="Runnable" seed="553469592" result="Passed" start-time="2020-11-17 16:22:00Z" end-time="2020-11-17 16:22:07Z" duration="6.260406" asserts="3">
-            <properties>
-              <property name="Order" value="3" />
-            </properties>
-          </test-case>
-          <test-case id="0-1006" name="DashboardCoulmnHeaderValiadtion" fullname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation.DashboardCoulmnHeaderValiadtion" methodname="DashboardCoulmnHeaderValiadtion" classname="PaylocityBenifitsDashboard.Scenarios.LoginCredentialsValidation" runstate="Runnable" seed="1972187282" result="Passed" start-time="2020-11-17 16:22:07Z" end-time="2020-11-17 16:22:08Z" duration="0.970582" asserts="9">
-            <properties>
-              <property name="Order" value="4" />
-            </properties>
-          </test-case>
+          <test-case id="0-1005" name="CalculationCheck" fullname="PaylocityBenifitsDashboard.Scenarios.AddEmployee.CalculationCheck" methodname="CalculationCheck" classname="PaylocityBenifitsDashboard.Scenarios.AddEmployee" runstate="Runnable" seed="1726441796" result="Passed" start-time="2020-11-18 01:48:28Z" end-time="2020-11-18 01:48:28Z" duration="0.000285" asserts="0" />
+          <test-case id="0-1003" name="OutofRangeDependent" fullname="PaylocityBenifitsDashboard.Scenarios.AddEmployee.OutofRangeDependent" methodname="OutofRangeDependent" classname="PaylocityBenifitsDashboard.Scenarios.AddEmployee" runstate="Runnable" seed="606287045" result="Passed" start-time="2020-11-18 01:48:28Z" end-time="2020-11-18 01:48:40Z" duration="12.500114" asserts="0" />
+          <test-case id="0-1004" name="ValidateAddedValidEmployee" fullname="PaylocityBenifitsDashboard.Scenarios.AddEmployee.ValidateAddedValidEmployee" methodname="ValidateAddedValidEmployee" classname="PaylocityBenifitsDashboard.Scenarios.AddEmployee" runstate="Runnable" seed="1869053775" result="Passed" start-time="2020-11-18 01:48:40Z" end-time="2020-11-18 01:48:52Z" duration="12.250183" asserts="5" />
         </test-suite>
       </test-suite>
     </test-suite>
