@@ -11,7 +11,7 @@ namespace PaylocityBenifitsDashboard.UIElements
         }
 
         [FindsBy(How = How.CssSelector,Using = "#employeeModal > div > div > div.modal-header > h5")]
-        public IWebElement UpdateEmployeeDialogBoxHeared { get; set; }
+        public IWebElement UpdateEmployeeDialogBoxHeader { get; set; }
 
         [FindsBy(How = How.CssSelector,Using = "#employeeModal > div > div > div.modal-body > form > div:nth-child(2) > label")]
         public IWebElement FirstNameLabel { get; set; }

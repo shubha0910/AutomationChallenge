@@ -54,6 +54,13 @@ namespace PaylocityBenifitsDashboard
                 public static string NumberOfDependents = "33";
             }
 
+            public static class UpdateEmployeeInfo
+            {
+                public static string FirstName = "Jim";
+                public static string LastName = "Knoke";
+                public static string NumberOfDependents = "4";
+            }
+
         }
 
     }
