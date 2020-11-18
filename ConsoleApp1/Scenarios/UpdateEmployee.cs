@@ -73,30 +73,81 @@ namespace PaylocityBenifitsDashboard.Scenarios
             int countOfDependents = dashboard.DependentsList.Count;
             int i;
 
-            string UpdateLastName = "Mike";
-            string UpdateFirstName = "Scott";
+            string UpdateFirstName = "Mike";
+            string UpdateLastName = "Scott";
 
             string existingFirstName = "";
             string existingLastName = "";
             string existingDependent = "";
+            string existingID;
+            string Id;
+            int j;
+            int dependents;
+            decimal BenifitsCost;
+            decimal NetPay;
+            string updatedFirstName = Config.EmployeeInfo.UpdateEmployeeInfo.FirstName;
+            string updatedLastName = Config.EmployeeInfo.UpdateEmployeeInfo.LastName;
+            string updatedDependents = Config.EmployeeInfo.UpdateEmployeeInfo.NumberOfDependents;
 
-            for (i=0; i <= countOfLastNames; i++)
+            try
             {
-                existingLastName = dashboard.LastNameList[i].Text;
-                if(existingLastName == UpdateLastName)
+                for (i = 0; i <= countOfLastNames; i++)
                 {
-                    if(existingFirstName == UpdateFirstName)
+                    existingLastName = dashboard.FirstNameList[i].Text;
+                    if (existingLastName == UpdateLastName)
                     {
-                        if(existingDependent == "2")
+                        existingFirstName = dashboard.LastNameList[i].Text;
+                        if (existingFirstName == UpdateFirstName)
                         {
-                            dashboard.EditActionList[i].Click();
-                            Actions.UpdateEmployee(Config.EmployeeInfo.UpdateEmployeeInfo.LastName, Config.EmployeeInfo.UpdateEmployeeInfo.NumberOfDependents, driver);
-                            break;
+                            existingDependent = dashboard.DependentsList[i].Text;
+                            if (existingDependent == "2")
+                            {
+                                dashboard.EditActionList[i].Click();
+                                Actions.UpdateEmployee(Config.EmployeeInfo.UpdateEmployeeInfo.FirstName, Config.EmployeeInfo.UpdateEmployeeInfo.LastName, Config.EmployeeInfo.UpdateEmployeeInfo.NumberOfDependents, driver);
+                                Id = dashboard.IdList[i].Text;
+
+                                for (j = 0; j <= countOfLastNames; j++)
+                                {
+                                    existingLastName = dashboard.FirstNameList[j].Text;
+                                    if (existingLastName == updatedLastName)
+                                    {
+                                        existingFirstName = dashboard.LastNameList[i].Text;
+                                        if (existingFirstName == updatedFirstName)
+                                        {
+                                            existingDependent = dashboard.DependentsList[i].Text;
+                                            if (existingDependent == updatedDependents)
+                                            {
+                                                existingID = dashboard.IdList[i].Text;
+                                                if (Id == existingID)
+                                                {
+                                                    Assert.IsTrue(true);
+                                                    dependents = Int32.Parse(updatedDependents);
+                                                    BenifitsCost = Actions.BenifitCalculation(dependents, driver);
+                                                    string CalBenifitCost = BenifitsCost.ToString();
+                                                    Assert.AreEqual(CalBenifitCost, dashboard.BenefitsCostList[i].Text);
+                                                    NetPay = Actions.NetPayCalcualtion(BenifitsCost, driver);
+                                                    string CalNetPay = NetPay.ToString();
+                                                    Assert.AreEqual(CalNetPay, dashboard.NetPayList[i].Text);
+                                                    break;
+                                                }
+                                            }
+
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
+            catch (Exception)
+            {
+                dashboard.LogOutLink.Click();
+            }
 
         }
+
     }
 }
+
+

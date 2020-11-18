@@ -81,13 +81,16 @@ namespace PaylocityBenifitsDashboard
             return Math.Round(NetPay,2);
         }
 
-        public static void UpdateEmployee(string name,string dependents,IWebDriver driver)
+        public static void UpdateEmployee(string firstname,string lastname,string dependents,IWebDriver driver)
         {
             AddEmployeeDialogBox addEmp = new AddEmployeeDialogBox(driver);
             UpdateEmployeeDialogBox updateEmp = new UpdateEmployeeDialogBox(driver);
 
             addEmp.FirstNameTextbox.Clear();
-            addEmp.FirstNameTextbox.SendKeys(name);
+            addEmp.FirstNameTextbox.SendKeys(firstname);
+
+            addEmp.LastNameTextbox.Clear();
+            addEmp.LastNameTextbox.SendKeys(lastname);
 
             addEmp.DependentsTextbox.Clear();
             addEmp.DependentsTextbox.SendKeys(dependents);

@@ -82,6 +82,8 @@ namespace PaylocityBenifitsDashboard.UIElements
         [FindsBy(How = How.XPath, Using = "//*[@id=\"employeesTable\"]/tbody/tr/td[9]/i[2]")]
         public IList<IWebElement> DeleteActionList { get; set; }
 
+        [FindsBy(How = How.XPath,Using = "//*[@id=\"employeesTable\"]/tbody/tr/td[1]")]
+        public IList<IWebElement> IdList { get; set; }
 
     }
 }
