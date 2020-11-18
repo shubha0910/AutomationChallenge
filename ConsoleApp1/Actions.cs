@@ -35,7 +35,7 @@ namespace PaylocityBenifitsDashboard
 
         }
 
-        public static void ValidAddEmployee(string firstname, string lastname, string dependents, IWebDriver driver)
+        public static void AddEmployee(string firstname, string lastname, string dependents, IWebDriver driver)
         {
             AddEmployeeDialogBox addEmp = new AddEmployeeDialogBox(driver);
 
@@ -50,9 +50,73 @@ namespace PaylocityBenifitsDashboard
 
             addEmp.AddButton.Click();
 
-            //EmployeeBenifitDashboardPage dashboard = new EmployeeBenifitDashboardPage(driver);
+        }
+        //struct Calculations
+        //{
+        //    public int GrossPay;
+        //    public int Salary;
+        //    public int BenifitsCost;
+        //    public int NetPay;
+
+        //}
+
+
+        //public Calculations BenifitCalculation1(int Dependents,IWebDriver driver)
+        //{
+        //    Calculations values = new Calculations();
+
+        //    values.GrossPay = 2000;
+        //    int NumberOfPaychecks = 26;
+        //    //int NumberOfDependents = 0;
+        //    int AnnualDeductionForEmployeePerYear = 1000;
+        //    int DependentDeductibleAmountPerYear = 500;
+        //    values.Salary =0;
+        //    values.BenifitsCost = 0;
+        //    values.NetPay = 0;
+        //    int DeductibleEmployeeBenefitOnlyPerPaycheck = 0;
+        //    int DependentDeductibleAmountPerPayCheck = 0;
+
+        //    values.Salary = values.GrossPay * NumberOfPaychecks;
+        //    DeductibleEmployeeBenefitOnlyPerPaycheck = AnnualDeductionForEmployeePerYear / NumberOfPaychecks;
+        //    DependentDeductibleAmountPerPayCheck = (DependentDeductibleAmountPerYear * Dependents) / NumberOfPaychecks;
+        //    values.BenifitsCost = DeductibleEmployeeBenefitOnlyPerPaycheck + DependentDeductibleAmountPerPayCheck;
+        //    values.NetPay = values.GrossPay - values.BenifitsCost;
+
+        //    return values;
+
+        //}
+
+
+        public static decimal BenifitCalculation(int Dependents, IWebDriver driver)
+        {
+            //decimal GrossPay =2000;
+            int NumberOfPaychecks = 26;
+            //decimal Salary = 0M;
+            decimal AnnualDeductionForEmployeePerYear = 1000M;
+            decimal DependentDeductibleAmountPerYear = 500M;
+            decimal DeductibleEmployeeBenefitOnlyPerPaycheck;
+            decimal DependentDeductibleAmountPerPayCheck;
+            decimal BenifitsCost;
+
+            DeductibleEmployeeBenefitOnlyPerPaycheck = AnnualDeductionForEmployeePerYear / NumberOfPaychecks;
+            DependentDeductibleAmountPerPayCheck = (DependentDeductibleAmountPerYear * Dependents) / NumberOfPaychecks;
+            BenifitsCost = DeductibleEmployeeBenefitOnlyPerPaycheck + DependentDeductibleAmountPerPayCheck;
+
+            return Math.Round(BenifitsCost,2);
 
 
         }
+
+        public static decimal NetPayCalcualtion(decimal BenifitsCost, IWebDriver driver)
+        {
+            decimal GrossPay = 2000M;
+            
+            decimal NetPay = GrossPay - BenifitsCost;
+
+            return Math.Round(NetPay,2);
+        }
+
+
+
     }
 }

@@ -63,7 +63,7 @@ namespace PaylocityBenifitsDashboard.Scenarios
         }
 
         [Test]
-        public void AddInvalidEmployee()
+        public void AddBlankEmployee()
         {
             AddEmployeeDialogBox addEmp = new AddEmployeeDialogBox(driver);
             EmployeeBenifitDashboardPage dashboard = new EmployeeBenifitDashboardPage(driver);
@@ -71,10 +71,53 @@ namespace PaylocityBenifitsDashboard.Scenarios
             Actions.LoginToEmployeeBenifitDashboard(Config.Credentials.Valid.Username, Config.Credentials.Valid.Password, driver);
             dashboard.AddEmployeeButton.Click();
 
-            Actions.ValidAddEmployee(Config.EmployeeInfo.ValidEmployeeInfo.FirstName, Config.EmployeeInfo.ValidEmployeeInfo.LastName, Config.EmployeeInfo.ValidEmployeeInfo.NumberOfDependents, driver);
+            try
+            {
+                Actions.AddEmployee(Config.EmployeeInfo.BlankEmployeeInfo.FirstName, Config.EmployeeInfo.BlankEmployeeInfo.LastName, Config.EmployeeInfo.BlankEmployeeInfo.NumberOfDependents, driver);
+                Assert.IsTrue(false);
+                addEmp.CancelButton.Click();
+                Thread.Sleep(2000);
+                dashboard.LogOutLink.Click();
+            }
+            catch(Exception)
+            {
+                Assert.IsTrue(true);
+                addEmp.CancelButton.Click();
+                Thread.Sleep(2000);
+                dashboard.LogOutLink.Click();
 
+            }
+            
             Thread.Sleep(3000);
 
+        }
+
+        [Test]
+        public void OutofRangeDependent()
+        {
+            AddEmployeeDialogBox addEmp = new AddEmployeeDialogBox(driver);
+            EmployeeBenifitDashboardPage dashboard = new EmployeeBenifitDashboardPage(driver);
+
+            Actions.LoginToEmployeeBenifitDashboard(Config.Credentials.Valid.Username, Config.Credentials.Valid.Password, driver);
+            dashboard.AddEmployeeButton.Click();
+
+            try
+            {
+                Actions.AddEmployee(Config.EmployeeInfo.OutofRangeDependentInfo.FirstName, Config.EmployeeInfo.OutofRangeDependentInfo.LastName, Config.EmployeeInfo.OutofRangeDependentInfo.NumberOfDependents, driver);
+                addEmp.CancelButton.Click();
+                Thread.Sleep(2000);
+                dashboard.LogOutLink.Click();
+            }
+            catch (Exception)
+            {
+                Assert.IsTrue(true);
+                addEmp.CancelButton.Click();
+                Thread.Sleep(2000);
+                dashboard.LogOutLink.Click();
+
+            }
+
+            Thread.Sleep(3000);
         }
 
         [Test]
@@ -96,7 +139,7 @@ namespace PaylocityBenifitsDashboard.Scenarios
             string lntext = Config.EmployeeInfo.ValidEmployeeInfo.LastName;
             string deptext = Config.EmployeeInfo.ValidEmployeeInfo.NumberOfDependents;
 
-            Actions.ValidAddEmployee(Config.EmployeeInfo.ValidEmployeeInfo.FirstName, Config.EmployeeInfo.ValidEmployeeInfo.LastName, Config.EmployeeInfo.ValidEmployeeInfo.NumberOfDependents, driver);
+            Actions.AddEmployee(Config.EmployeeInfo.ValidEmployeeInfo.FirstName, Config.EmployeeInfo.ValidEmployeeInfo.LastName, Config.EmployeeInfo.ValidEmployeeInfo.NumberOfDependents, driver);
 
             Thread.Sleep(3000);
 
@@ -113,6 +156,9 @@ namespace PaylocityBenifitsDashboard.Scenarios
             string addedLastName = "";
             string addedDependent = "";
             int i;
+            int dependents;
+            decimal BenifitsCost;
+            decimal NetPay;
 
             for (i = 0; i <= countOfLastNames; i++)
             {
@@ -129,16 +175,31 @@ namespace PaylocityBenifitsDashboard.Scenarios
                         if (deptext == addedDependent)
                         {
                             Assert.IsTrue(true);
+                            dependents = Int32.Parse(addedDependent);
+                            BenifitsCost = Actions.BenifitCalculation(dependents, driver);
+                            string CalBenifitCost = BenifitsCost.ToString();
+                            Assert.AreEqual(CalBenifitCost, dashboard.BenefitsCostList[i].Text);
+                            NetPay = Actions.NetPayCalcualtion(BenifitsCost, driver);
+                            string CalNetPay = NetPay.ToString();
+                            Assert.AreEqual(CalNetPay, dashboard.NetPayList[i].Text);
                             break;
+
+                            
                         }
                     }
 
                 }
+                
 
             }
 
             Thread.Sleep(3000);
 
+        }
+        [Test]
+        public void CalculationCheck()
+        {
+            
         }
 
 

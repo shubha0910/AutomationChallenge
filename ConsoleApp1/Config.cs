@@ -40,6 +40,20 @@ namespace PaylocityBenifitsDashboard
 
             }
 
+            public static class BlankEmployeeInfo
+            {
+                public static string FirstName = "";
+                public static string LastName = "";
+                public static string NumberOfDependents = "";
+            }
+
+            public static class OutofRangeDependentInfo
+            {
+                public static string FirstName = "Todd";
+                public static string LastName = "Packer";
+                public static string NumberOfDependents = "33";
+            }
+
         }
 
     }
