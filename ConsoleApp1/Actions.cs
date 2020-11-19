@@ -11,10 +11,34 @@ namespace PaylocityBenifitsDashboard
     {
         public static IWebDriver InitializeDriver()
         {
-            IWebDriver driver = new ChromeDriver();
-            driver.Navigate().GoToUrl(Config.BaseURL);
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            return driver;
+            bool HeadlessBrowser= Config.HeadlessBrowserOption.HeadlessBrowser;
+
+            if(HeadlessBrowser == true)
+            {
+                ChromeOptions options = new ChromeOptions();
+
+                //add the headless argument
+                options.AddArgument("headless");
+
+                //pass the options parameter in the Chrome driver declaration
+                IWebDriver driver = new ChromeDriver(options);
+
+                driver.Navigate().GoToUrl(Config.BaseURL);
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+                return driver;
+            }
+            else
+            {
+                IWebDriver driver = new ChromeDriver();
+
+                driver.Navigate().GoToUrl(Config.BaseURL);
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+                driver.Manage().Window.Maximize();
+                return driver;
+            }
+
+            
+            
         }
 
 

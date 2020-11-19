@@ -5,10 +5,10 @@ using PaylocityBenifitsDashboard.UIElements;
 namespace PaylocityBenifitsDashboard.Scenarios
 {
     [Parallelizable]
-    public class LoginPageLayoutValidations
+    public class T1LoginPageLayoutValidations
     {
         public IWebDriver  driver { get; set; }
-        public LoginPageLayoutValidations()
+        public T1LoginPageLayoutValidations()
         {
 
         }

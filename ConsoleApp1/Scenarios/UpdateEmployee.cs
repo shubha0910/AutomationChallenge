@@ -6,10 +6,12 @@ using System.Threading;
 
 namespace PaylocityBenifitsDashboard.Scenarios
 {
-    public class UpdateEmployee
+    [Parallelizable]
+    public class T4UpdateEmployee
     {
+        
         public IWebDriver driver { get; set; }
-        public UpdateEmployee()
+        public T4UpdateEmployee()
         {
 
         }

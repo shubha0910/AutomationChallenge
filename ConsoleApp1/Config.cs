@@ -6,8 +6,17 @@ namespace PaylocityBenifitsDashboard
     {
         public static string BaseURL = "https://wmxrwq14uc.execute-api.us-east-1.amazonaws.com/Prod/Account/Login";
 
+
+        public static class HeadlessBrowserOption
+        {
+            public static bool HeadlessBrowser = false;
+
+        }
+
         public static class Credentials
         {
+            
+
             public static class Valid
             {
                 public static string Username = "TestUser40";

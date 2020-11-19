@@ -5,10 +5,10 @@ using System;
 
 namespace PaylocityBenifitsDashboard.Scenarios
 {
-    public class DeleteEmployee
+    public class T5DeleteEmployee
     {
         public IWebDriver driver { get; set; }
-        public DeleteEmployee()
+        public T5DeleteEmployee()
         {
 
         }

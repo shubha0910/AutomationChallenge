@@ -7,10 +7,10 @@ using System.Threading;
 namespace PaylocityBenifitsDashboard.Scenarios
 {
     [Parallelizable]
-    public class LoginCredentialsValidation
+    public class T2LoginCredentialsValidation
     {
         public IWebDriver driver { get; set; }
-        public LoginCredentialsValidation()
+        public T2LoginCredentialsValidation()
         {
 
         }
